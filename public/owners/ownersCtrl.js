@@ -3,7 +3,7 @@
 
     angular
         .module('owners')
-        .controller('ownersCtrl', ['$scope', 'ownersSvc', '$location', '$routeParams', function ($scope, ownersSvc, $location, $routeParams,$rootScope) {
+        .controller('ownersCtrl', ['$scope', 'ownersSvc', '$location', '$routeParams', '$rootScope', function ($scope, ownersSvc, $location, $routeParams,) {
             ownersSvc.getOwners().success(function (owners) {
                 $scope.owners = owners;
             });
