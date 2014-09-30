@@ -4,15 +4,15 @@
     angular
         .module('owners')
         .controller('ownersCtrl', ['$scope', 'ownersSvc', '$location', '$routeParams', function ($scope, ownersSvc, $location, $routeParams) {
-            ownersSvc.getOwners().success(function (posts) {
+            ownersSvc.getOwners().success(function (owners) {
                 $scope.owners = owners;
             });
 
-            ownersSvc.getOwner($routeParams.postId).success(function (post) {
+            ownersSvc.getOwner($routeParams.ownerId).success(function (owner) {
                 $scope.owner = owner;
             });
 
-            $scope.createOwner = function (newPost) {
+            $scope.createOwner = function (newOwner) {
                 ownersSvc.createOwner(newOwner);
                 $location.path('/owners');
             };
