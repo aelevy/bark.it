@@ -28,8 +28,11 @@
             };
 
             $rootScope.$on("dog:added", function (){
-             $scope.products = dogsSvc.getDogs();
+             $scope.dogs = dogsSvc.getDogs();
               });
+
+
+
 
 
         }]);
