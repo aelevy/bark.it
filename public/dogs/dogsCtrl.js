@@ -3,7 +3,7 @@
 
     angular
         .module('dogs')
-        .controller('dogsCtrl', ['$scope', 'dogsSvc', '$location', '$routeParams', '$rootScope', function ($scope, dogsSvc, $location, $routeParams) {
+        .controller('dogsCtrl', ['$scope', 'dogsSvc', '$location', '$routeParams',function ($scope, dogsSvc, $location, $routeParams, $rootScope) {
             dogsSvc.getDogs().success(function (dogs) {
                 $scope.dogs = dogs;
             });
