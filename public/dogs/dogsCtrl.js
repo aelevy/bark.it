@@ -13,7 +13,7 @@
             });
 
             $scope.createDog = function (newDog) {
-                dogsSvc.createdog(newdog);
+                dogsSvc.createDog(newdog);
                 $location.path('/dogs');
             };
 
