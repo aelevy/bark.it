@@ -1,0 +1,5 @@
+<a href="#/dogs/new" class="btn btn-success">Create New Dog</a>
+<section data-ng-repeat="dog in dogs">
+    <h2>{{dog.name}}</h2>
+    <a href="#/dogs/{{dog._id}}">view more</a>
+</section>

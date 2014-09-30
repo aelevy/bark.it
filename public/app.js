@@ -1,10 +1,11 @@
 (function () {
     "use strict";
 
-    angular.module('baby-mean',[
+    angular.module('bark.it',[
     "ngRoute",
     "ngCookies",
-    "posts"
+    "owners",
+    "dogs"
     ])
     .config(function ($routeProvider) {
         $routeProvider

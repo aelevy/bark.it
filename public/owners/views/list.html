@@ -1,0 +1,5 @@
+<a href="#/owners/new" class="btn btn-success">Create New Owner</a>
+<section data-ng-repeat="owner in owners">
+    <h2>{{owner.name}}</h2>
+    <a href="#/owners/{{owner._id}}">view more</a>
+</section>

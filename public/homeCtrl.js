@@ -2,7 +2,7 @@
     "use strict";
 
     angular
-        .module('baby-mean')
+        .module('bark.it')
         .controller('homeCtrl',['$scope', function ($scope) {
 
         }]);
