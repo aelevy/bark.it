@@ -4,7 +4,7 @@
     angular
         .module('dogs')
         .controller('dogsCtrl', ['$scope', 'dogsSvc', '$location', '$routeParams', function ($scope, dogsSvc, $location, $routeParams) {
-            dogsSvc.getdogs().success(function (dogs) {
+            dogsSvc.getDogs().success(function (dogs) {
                 $scope.dogs = dogs;
             });
 
