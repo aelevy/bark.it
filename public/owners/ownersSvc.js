@@ -16,28 +16,28 @@
 
             function getOwners() {
 
-                return $http.get("api/collections/bark-it");
+                return $http.get("api/collections/owners");
             }
 
             function getOwner(ownerId) {
-                return $http.get("api/collections/bark-it/" + ownerId);
+                return $http.get("api/collections/owners/" + ownerId);
             }
 
             function createOwner(newOwner) {
-                $http.post("api/collections/bark-it", newOwner).then(function (res) {
+                $http.post("api/collections/owners", newOwner).then(function (res) {
                     $rootScope.$broadcast("owner:added");
                 });
             }
 
             function editOwner(owner) {
-                $http.put("api/collections/bark-it/" + owner._id, owner).then(function (res) {
+                $http.put("api/collections/owners/" + owner._id, owner).then(function (res) {
                     $rootScope.$broadcast("owner:updated");
                 });
 
             }
 
             function deleteOwner(ownerId) {
-                $http.delete("api/collections/bark-it/" + ownerId).then(function (res) {
+                $http.delete("api/collections/owners/" + ownerId).then(function (res) {
                     $rootScope.$broadcast("owner:deleted");
                 });
             }

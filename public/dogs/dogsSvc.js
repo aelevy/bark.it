@@ -16,28 +16,28 @@
 
             function getDogs() {
 
-                return $http.get("api/collections/bark-it");
+                return $http.get("api/collections/dogs");
             }
 
             function getDog(dogId) {
-                return $http.get("api/collections/bark-it/" + dogId);
+                return $http.get("api/collections/dogs/" + dogId);
             }
 
             function createDog(newDog) {
-                $http.post("api/collections/bark-it", newDog).then(function (res) {
+                $http.post("api/collections/dogs", newDog).then(function (res) {
                     $rootScope.$broadcast("dog:added");
                 });
             }
 
             function editDog(dog) {
-                $http.put("api/collections/bark-it/" + dog._id, dog).then(function (res) {
+                $http.put("api/collections/dogs/" + dog._id, dog).then(function (res) {
                     $rootScope.$broadcast("dog:updated");
                 });
 
             }
 
             function deleteDog(dogId) {
-                $http.delete("api/collections/bark-it/" + dogId).then(function (res) {
+                $http.delete("api/collections/dogs/" + dogId).then(function (res) {
                     $rootScope.$broadcast("dog:deleted");
                 });
             }
