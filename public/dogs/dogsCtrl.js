@@ -27,6 +27,10 @@
                 $location.path('/dogs');
             }
 
+            $rootScope.$on("dog:added", function (){
+             $scope.products = dogsSvc.getDogs();
+              });
+
 
         }]);
 })();

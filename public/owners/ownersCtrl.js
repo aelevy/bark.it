@@ -27,6 +27,10 @@
                 $location.path('/owners');
             }
 
+            $rootScope.$on("owner:added", function (){
+             $scope.products = ownersSvc.getOwners();
+              });
+
 
         }]);
 })();
