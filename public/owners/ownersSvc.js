@@ -25,6 +25,7 @@
 
             function createOwner(newOwner) {
                 $http.post("api/collections/owners", newOwner).then(function (user) {
+                 console.log(user);
                     $cookieStore.put("currentuser", user.data)
                     $rootScope.$broadcast("owner:added");
                 });
