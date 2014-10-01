@@ -9,5 +9,11 @@
 </section>
 
 <section>
-<button <a href="#/dogs/new">Add A Dog</a></button>
+<button ng-click="dogAdd = true"<a href="">Add A Dog</a></button>
+<div ng-show="dogAdd">
+<input type="text" data-ng-model="dog.name" placeholder="Name">
+<input type="text" ng-model="dog.type" placeholder="Breed">
+<input type="number" ng-model="dog.weight" placeholder="Weight">
+<button data-ng-click="createDog(dog)">Create</button>
+</div>
 </section>
