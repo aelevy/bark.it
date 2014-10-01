@@ -7,6 +7,7 @@
           $scope.login = function (email) {
            ownersSvc.getOwners().success(function (users) {
             var currentUser = _.find(users, {email : email});
+            console.log(currentUser)
             $cookieStore.put("currentuser", currentUser)
             $location.path("/owners/" + currentUser._id)
            })
