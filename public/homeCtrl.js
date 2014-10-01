@@ -8,7 +8,7 @@
            ownersSvc.getOwners().success(function () {
             var currentUser = _.find(users, {email : email});
             $cookieStore.put("currentuser", currentUser)
-            $location.path("/owners" + currentUser_.id)
+            $location.path("/owners/" + currentUser_.id)
            })
           }
         }]);
