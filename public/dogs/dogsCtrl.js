@@ -14,7 +14,7 @@
 
             $scope.createDog = function (newDog) {
                 dogsSvc.createDog(newDog);
-                $location.path('/dogs');
+                $location.path('/owners/:ownerId');
             };
 
             $scope.editDog = function (dog) {

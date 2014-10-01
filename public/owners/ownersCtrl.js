@@ -14,7 +14,7 @@
 
             $scope.createOwner = function (newOwner) {
                 ownersSvc.createOwner(newOwner);
-                $location.path('/owners');
+                $location.path('/owners/:ownerId');
             };
 
             $scope.editOwner = function (owner) {

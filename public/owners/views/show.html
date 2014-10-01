@@ -1,4 +1,13 @@
 <section>
     <h1>{{owner.name}}</h1>
+    <img src="{{owner.image}}" alt="">
+    <p>{{owner.email}}</p>
+    <p>{{owner.phone}}</p>
+    <p>https://twitter.com/{{owner.twitter}}</p>
+    <p>https://instagram.com/{{owner.instagram}}</p>
     <a href="#/owners/{{owner._id}}/edit">Edit</a> | <a ng-click="deleteOwner(owner._id)">Delete</a>
+</section>
+
+<section>
+<button <a href="#/dogs/new">Add A Dog</a></button>
 </section>
