@@ -6,6 +6,7 @@
         .controller('homeCtrl',['$scope', '$cookieStore', '_', 'ownersSvc', '$location', function ($scope, $cookieStore, _, ownersSvc, $location) {
           $scope.login = function (email) {
            ownersSvc.getOwners().success(function (users) {
+            console.log(users)
             var currentUser = _.find(users, {email : email});
             console.log(currentUser)
             $cookieStore.put("currentuser", currentUser)
