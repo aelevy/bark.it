@@ -3,8 +3,8 @@
     <img src="{{owner.image}}" alt="">
     <p>{{owner.email}}</p>
     <p>{{owner.phone}}</p>
-    <p>https://twitter.com/{{owner.twitter}}</p>
-    <p>https://instagram.com/{{owner.instagram}}</p>
+   <a href="https://twitter.com/{{owner.twitter}}"><img src="../images/Twitter-icon.png" alt=""></a>
+    <a href="https://instagram.com/{{owner.instagram}}"><img src="../images/Instagram-icon.png" alt=""></a>
     <a href="#/owners/{{owner._id}}/edit">Edit</a> | <a ng-click="deleteOwner(owner._id)">Delete</a>
 </section>
 
