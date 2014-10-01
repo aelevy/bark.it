@@ -3,7 +3,7 @@
 
     angular
         .module('owners')
-        .factory('ownersSvc', ['$http', '$rootScope', function ($http, $rootScope) {
+        .factory('ownersSvc', ['$http', '$cookieStore', '$rootScope', function ($http, $rootScope, $cookieStore) {
 
             // public service methods
             return {
@@ -24,7 +24,8 @@
             }
 
             function createOwner(newOwner) {
-                $http.post("api/collections/owners", newOwner).then(function (res) {
+                $http.post("api/collections/owners", newOwner).then(function (user) {
+                    $cookieStore.put("currentuser", user.data)
                     $rootScope.$broadcast("owner:added");
                 });
             }

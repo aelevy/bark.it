@@ -4,6 +4,7 @@
     angular.module('bark.it',[
     "ngRoute",
     "ngCookies",
+    "lodash",
     "owners",
     "dogs"
     ])
@@ -17,5 +18,9 @@
                 redirectTo: '/'
             });
     });
+
+   angular.module("lodash", []).factory('_', function () {
+     return window._;
+   })
 
 })();

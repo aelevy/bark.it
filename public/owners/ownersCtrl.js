@@ -3,7 +3,7 @@
 
     angular
         .module('owners')
-        .controller('ownersCtrl', ['$scope', 'ownersSvc', '$location', '$routeParams', '$rootScope', function ($scope, ownersSvc, $location, $routeParams, $rootScope) {
+        .controller('ownersCtrl', ['$scope', 'ownersSvc', '$location', '$routeParams', '$rootScope', '$cookieStore', '_', function ($scope, ownersSvc, $location, $routeParams, $rootScope, $cookieStore, _) {
             ownersSvc.getOwners().success(function (owners) {
                 $scope.owners = owners;
             });
@@ -14,7 +14,7 @@
 
             $scope.createOwner = function (newOwner) {
                 ownersSvc.createOwner(newOwner);
-                $location.path('/owners');
+
             };
 
             $scope.editOwner = function (owner) {
@@ -27,8 +27,9 @@
                 $location.path('/owners');
             };
 
-            $rootScope.$on("owner:added", function (){
-             $scope.owners = ownersSvc.getOwners();
+            $scope.$on("owner:added", function (){
+             var currentUser = $cookieStore.get("currentuser");
+             $location.path("/owners/" + currentUser._id)
               });
 
 
