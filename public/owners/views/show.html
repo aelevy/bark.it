@@ -1,5 +1,12 @@
+<div>
+ <carousel interval="myInterval" id="carouselID">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}">
+
+      </slide>
+     </carousel>
 <div class="container-fluid">
- <div>
+
   <div class="row">
    <!-- <div class="col-md-12">
     <img src="../images/barkIT.png" alt="">
@@ -22,7 +29,7 @@
      <a href="#/owners/{{owner._id}}/edit">Edit Profile</a> | <a ng-click="deleteOwner(owner._id)">Delete Profile</a>
     </div>
   </div>
- </div>
+
 <hr>
  <div>
   <div class="col-md-12" id="dogTag">
@@ -52,7 +59,7 @@
 
  <div ng-repeat="dog in dogs">
   <div class="col-md-4">
-   <p>{{dog.name}}</p>
+   <h3>{{dog.name}}</h3>
    <p>{{dog.type}}</p>
    <p>{{dog.weight}}</p>
   </div>
@@ -62,6 +69,7 @@
    <img src="{{dog.image}}" alt="">
   </div>
   <div class="col-md-4">
+   <h3><u>Reminders</u></h3>
    <div ng-repeat="reminder in dog.reminders">
      <p>{{reminder}}</p>
    </div>
@@ -71,6 +79,9 @@
   <button type="submit" ng-click="reminderAdd = false">Add Reminder</button>
  </form>
   </div>
+  <hr>
  </div>
+</div>
+</div>
 </div>
 </div>

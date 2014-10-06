@@ -75,6 +75,14 @@
               })
             })
 
-           
+$scope.myInterval = 5000;
+  var slides = $scope.slides = [
+  { image:"http://www.bestfon.info/images/joomgallery/originals/animales_7/dog_with_glasses_20140320_2017987799.jpg"
+ },
+ {
+  image:"http://www.animalpictures1.com/data/media/177/dog_2560x1440.jpg"
+ }
+  ];
+
         }]);
 })();

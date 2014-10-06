@@ -1,3 +1,9 @@
+#carouselID {
+  height: 100%; }
+  #carouselID img {
+    width: 100%;
+    opacity: .7; }
+
 .container-fluid {
   text-align: center; }
   .container-fluid #mainLogo img {
