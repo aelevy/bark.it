@@ -1,8 +1,19 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
+.container-fluid {
+  text-align: center; }
+  .container-fluid #mainLogo img {
+    width: 75%; }
+  .container-fluid #profileIMG img {
+    width: 30%;
+    border-radius: 50%; }
+  .container-fluid #socialNav img {
+    width: 8%; }
+  .container-fluid #contactInfo img {
+    height: 25px;
+    width: 25px; }
+  .container-fluid #dogTag img:hover {
+    cursor: pointer; }
+  .container-fluid #dogProfileIMG img {
+    width: 80%;
+    border-radius: 50%; }
+  .container-fluid #dogCard {
+    margin-top: 5%; }

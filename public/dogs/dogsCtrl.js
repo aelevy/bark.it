@@ -12,10 +12,7 @@
                 $scope.dog = dog;
             });
 
-            $scope.createDog = function (newDog) {
-                dogsSvc.createDog(newDog);
-                $location.path('/dogs');
-            };
+           
 
             $scope.editDog = function (dog) {
                 dogsSvc.editDog(dog);

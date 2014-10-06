@@ -6,7 +6,8 @@
     "ngCookies",
     "lodash",
     "owners",
-    "dogs"
+    "dogs",
+    "ui.bootstrap"
     ])
     .config(function ($routeProvider) {
         $routeProvider

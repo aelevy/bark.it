@@ -1,19 +1,76 @@
-<section>
-    <h1>{{owner.name}}</h1>
-    <img src="{{owner.image}}" alt="">
-    <p>{{owner.email}}</p>
-    <p>{{owner.phone}}</p>
-   <a href="https://twitter.com/{{owner.twitter}}"><img src="../images/Twitter-icon.png" alt=""></a>
-    <a href="https://instagram.com/{{owner.instagram}}"><img src="../images/Instagram-icon.png" alt=""></a>
-    <a href="#/owners/{{owner._id}}/edit">Edit</a> | <a ng-click="deleteOwner(owner._id)">Delete</a>
-</section>
+<div class="container-fluid">
+ <div>
+  <div class="row">
+   <!-- <div class="col-md-12">
+    <img src="../images/barkIT.png" alt="">
+   </div> -->
+    <div class="col-md-12" id="profileIMG">
+     <img src="{{owner.image}}" alt="">
+    </div>
+    <div class="col-md-12">
+     <h1>{{owner.name}}</h1>
+    </div>
+    <div class="col-md-12" id="contactInfo">
+     <p><img src="../images/email.png" alt="">{{owner.email}}    <img src="../images/telephone_black.png" alt="">{{owner.phone}}</p>
 
-<section>
-<button ng-click="dogAdd = true"<a href="">Add A Dog</a></button>
-<div ng-show="dogAdd">
-<input type="text" data-ng-model="dog.name" placeholder="Name">
-<input type="text" ng-model="dog.type" placeholder="Breed">
-<input type="number" ng-model="dog.weight" placeholder="Weight">
-<button data-ng-click="createDog(dog)">Create</button>
+    </div>
+    <div class="col-md-12" id="socialNav">
+     <a href="https://twitter.com/{{owner.twitter}}"><img src="../images/Twitter-icon.png" alt=""></a>
+     <a href="https://instagram.com/{{owner.instagram}}"><img src="../images/Instagram-icon.png" alt=""></a>
+    </div>
+    <div class="col-md-12">
+     <a href="#/owners/{{owner._id}}/edit">Edit Profile</a> | <a ng-click="deleteOwner(owner._id)">Delete Profile</a>
+    </div>
+  </div>
+ </div>
+<hr>
+ <div>
+  <div class="col-md-12" id="dogTag">
+   <img src="../images/tag_add.png" alt="" ng-click="dogAdd = true">
+  </div>
+   <div  class="col-md-12" ng-show="dogAdd">
+    <form ng-submit="createDog(newDog)">
+     <!-- <div class="col-md-3"> -->
+      <input type="text" data-ng-model="newDog.name" placeholder="Name">
+     <!-- </div> -->
+     <!-- <div class="col-md-3"> -->
+      <input type="url" ng-model="newDog.image"placeholder="Image URL">
+     <!-- </div> -->
+     <!-- <div class="col-md-3"> -->
+      <input type="text" ng-model="newDog.type" placeholder="Breed">
+     <!-- </div> -->
+     <!-- <div class="col-md-3"> -->
+      <input type="number" ng-model="newDog.weight" placeholder="Weight">
+    <!--  </div>
+       </div> -->
+   <!-- <div class="col-md-12"> -->
+      <button type="submit" ng-click="dogAdd = false">Create</button>
+   <!-- </div> -->
+    </form>
+ </div>
+<div  id="dogCard" class="col-md-12">
+
+ <div ng-repeat="dog in dogs">
+  <div class="col-md-4">
+   <p>{{dog.name}}</p>
+   <p>{{dog.type}}</p>
+   <p>{{dog.weight}}</p>
+  </div>
+
+
+  <div class="col-md-4" id=dogProfileIMG>
+   <img src="{{dog.image}}" alt="">
+  </div>
+  <div class="col-md-4">
+   <div ng-repeat="reminder in dog.reminders">
+     <p>{{reminder}}</p>
+   </div>
+ <button ng-click="reminderAdd = true">Add Reminder</button>
+ <form ng-submit="createReminder(dog, reminder)" ng-show="reminderAdd">
+  <input type="text" ng-model="reminder" placeholder="Enter Reminder">
+  <button type="submit" ng-click="reminderAdd = false">Add Reminder</button>
+ </form>
+  </div>
+ </div>
 </div>
-</section>
+</div>
