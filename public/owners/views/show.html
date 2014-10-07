@@ -1,11 +1,11 @@
-<div>
+<!-- <div>
  <carousel interval="myInterval" id="carouselID">
       <slide ng-repeat="slide in slides" active="slide.active">
         <img ng-src="{{slide.image}}">
 
       </slide>
-     </carousel>
-<div class="container-fluid">
+     </carousel> -->
+<div class="container-fluid" id="profilePage">
 
   <div class="row">
    <!-- <div class="col-md-12">
@@ -18,7 +18,7 @@
      <h1>{{owner.name}}</h1>
     </div>
     <div class="col-md-12" id="contactInfo">
-     <p><img src="../images/email.png" alt="">{{owner.email}}    <img src="../images/telephone_black.png" alt="">{{owner.phone}}</p>
+     <p><img src="../images/email.png" alt=""><a href="mailto:{{owner.email}}">{{owner.email}}</a>    <img src="../images/telephone_black.png" alt=""><a href="tel:{{owner.phone}}">{{owner.phone}}</a></p>
 
     </div>
     <div class="col-md-12" id="socialNav">
@@ -30,7 +30,7 @@
     </div>
   </div>
 
-<hr>
+
  <div>
   <div class="col-md-12" id="dogTag">
    <img src="../images/tag_add.png" alt="" ng-click="dogAdd = !dogAdd">
@@ -55,9 +55,13 @@
    <!-- </div> -->
     </form>
  </div>
-<div  id="dogCard" class="col-md-12">
+
+ <hr>
+
+
 
  <div ng-repeat="dog in dogs">
+  <div  id="dogCard" class="col-md-12">
   <div class="col-md-4">
    <h3>{{dog.name}}</h3>
    <p>{{dog.type}}</p>
@@ -85,4 +89,4 @@
 </div>
 </div>
 </div>
-</div>
+<!-- </div> -->
