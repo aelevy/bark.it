@@ -33,7 +33,7 @@
 <hr>
  <div>
   <div class="col-md-12" id="dogTag">
-   <img src="../images/tag_add.png" alt="" ng-click="dogAdd = true">
+   <img src="../images/tag_add.png" alt="" ng-click="dogAdd = !dogAdd">
   </div>
    <div  class="col-md-12" ng-show="dogAdd">
     <form ng-submit="createDog(newDog)">
@@ -70,8 +70,9 @@
   </div>
   <div class="col-md-4">
    <h3><u>Reminders</u></h3>
-   <div ng-repeat="reminder in dog.reminders">
-     <p>{{reminder}}</p>
+   <div id="reminderList" ng-repeat="reminder in dog.reminders">
+    <ul>
+     <li><img src="../images/paw.png" alt="">{{reminder}}</li>
    </div>
  <button ng-click="reminderAdd = true">Add Reminder</button>
  <form ng-submit="createReminder(dog, reminder)" ng-show="reminderAdd">

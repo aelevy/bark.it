@@ -1,8 +1,15 @@
 #carouselID {
-  height: 100%; }
+  height: 100%;
+  position: fixed; }
   #carouselID img {
     width: 100%;
     opacity: .7; }
+  #carouselID .carousel-indicators {
+    display: none; }
+  #carouselID .carousel-control.left {
+    display: none; }
+  #carouselID .carousel-control.right {
+    display: none; }
 
 .container-fluid {
   text-align: center; }
@@ -23,3 +30,5 @@
     border-radius: 50%; }
   .container-fluid #dogCard {
     margin-top: 5%; }
+  .container-fluid #reminderList li {
+    list-style-type: none; }
