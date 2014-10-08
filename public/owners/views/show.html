@@ -5,88 +5,93 @@
 
       </slide>
      </carousel> -->
-<div class="container-fluid" id="profilePage">
+     <div class="container-fluid" id="profilePage">
 
-  <div class="row">
-   <!-- <div class="col-md-12">
-    <img src="../images/barkIT.png" alt="">
-   </div> -->
-    <div class="col-md-12" id="profileIMG">
-     <img src="{{owner.image}}" alt="">
-    </div>
-    <div class="col-md-12">
-     <h1>{{owner.name}}</h1>
-    </div>
-    <div class="col-md-12" id="contactInfo">
-     <p><img src="../images/email.png" alt=""><a href="mailto:{{owner.email}}">{{owner.email}}</a>    <img src="../images/telephone_black.png" alt=""><a href="tel:{{owner.phone}}">{{owner.phone}}</a></p>
+      <div class="row">
+       <div class="col-md-3">
+       </div>
+       <div class="col-md-3"></div>
 
-    </div>
-    <div class="col-md-12" id="socialNav">
-     <a href="https://twitter.com/{{owner.twitter}}"><img src="../images/Twitter-icon.png" alt=""></a>
-     <a href="https://instagram.com/{{owner.instagram}}"><img src="../images/Instagram-icon.png" alt=""></a>
-    </div>
-    <div class="col-md-12">
-     <a href="#/owners/{{owner._id}}/edit">Edit Profile</a> | <a ng-click="deleteOwner(owner._id)">Delete Profile</a>
-    </div>
-  </div>
+       <div class="col-md-6" id="profileColumn">
+        <div class="ownerProfileInfo">
+        <div class="row" id="profileIMG">
+         <img src="{{owner.image}}" alt="">
+        </div>
+        <div class="row">
+         <h1>{{owner.name}}</h1>
+        </div>
+        <div class="row" id="contactInfo">
+         <p><img src="../images/email.png" alt=""><a href="mailto:{{owner.email}}">{{owner.email}}</a>    <img src="../images/telephone_black.png" alt=""><a href="tel:{{owner.phone}}">{{owner.phone}}</a></p>
 
-
- <div>
-  <div class="col-md-12" id="dogTag">
-   <img src="../images/tag_add.png" alt="" ng-click="dogAdd = !dogAdd">
-  </div>
-   <div  class="col-md-12" ng-show="dogAdd">
-    <form ng-submit="createDog(newDog)">
-     <!-- <div class="col-md-3"> -->
-      <input type="text" data-ng-model="newDog.name" placeholder="Name">
-     <!-- </div> -->
-     <!-- <div class="col-md-3"> -->
-      <input type="url" ng-model="newDog.image"placeholder="Image URL">
-     <!-- </div> -->
-     <!-- <div class="col-md-3"> -->
-      <input type="text" ng-model="newDog.type" placeholder="Breed">
-     <!-- </div> -->
-     <!-- <div class="col-md-3"> -->
-      <input type="number" ng-model="newDog.weight" placeholder="Weight">
-    <!--  </div>
-       </div> -->
-   <!-- <div class="col-md-12"> -->
-      <button type="submit" ng-click="dogAdd = false">Create</button>
-   <!-- </div> -->
-    </form>
- </div>
-
- <hr>
+        </div>
+        <div class="row" id="socialNav">
+         <a href="https://twitter.com/{{owner.twitter}}"><img src="../images/Twitter-icon.png" alt=""></a>
+         <a href="https://instagram.com/{{owner.instagram}}"><img src="../images/Instagram-icon.png" alt=""></a>
+        </div>
+        <div class="row">
+         <a href="#/owners/{{owner._id}}/edit">Edit Profile</a> | <a ng-click="deleteOwner(owner._id)">Delete Profile</a>
+        </div>
 
 
 
- <div ng-repeat="dog in dogs">
-  <div  id="dogCard" class="col-md-12">
-  <div class="col-md-4">
-   <h3>{{dog.name}}</h3>
-   <p>{{dog.type}}</p>
-   <p>{{dog.weight}}</p>
-  </div>
+
+        <div class="row" id="dogTag">
+         <img src="../images/tag_add.png" alt="" ng-click="dogAdd = !dogAdd">
+        </div>
+        <div  class="row" ng-show="dogAdd">
+         <form class="form-inline" ng-submit="createDog(newDog)">
+          <div class="col-md-3">
+          <input type="text" class="form-control" data-ng-model="newDog.name" placeholder="Dog's Name">
+         </div>
+         <div class="col-md-3">
+          <input type="url" class="form-control" ng-model="newDog.image"placeholder="Image URL">
+         </div>
+         <div class="col-md-3">
+          <input type="text" class="form-control" ng-model="newDog.type" placeholder="Breed">
+         </div>
+         <div class="col-md-3">
+          <input type="number" class="form-control" ng-model="newDog.weight" placeholder="Weight">
+         </div>
+         <button type="submit" class="btn btn-info" ng-click="dogAdd = false">Create Your Dog</button>
+
+        </form>
+       </div>
+      </div>
 
 
-  <div class="col-md-4" id=dogProfileIMG>
-   <img src="{{dog.image}}" alt="">
-  </div>
-  <div class="col-md-4">
-   <h3><u>Reminders</u></h3>
-   <div id="reminderList" ng-repeat="reminder in dog.reminders">
-    <ul>
-     <li><img src="../images/paw.png" alt="">{{reminder}}</li>
-   </div>
- <button ng-click="reminderAdd = true">Add Reminder</button>
- <form ng-submit="createReminder(dog, reminder)" ng-show="reminderAdd">
-  <input type="text" ng-model="reminder" placeholder="Enter Reminder">
-  <button type="submit" ng-click="reminderAdd = false">Add Reminder</button>
- </form>
-  </div>
-  <hr>
- </div>
-</div>
-</div>
-</div>
+
+
+
+
+
+       <div ng-repeat="dog in dogs">
+        <div  id="dogCard" class="row">
+         <div class="col-md-4" id="dogProfileInfo">
+          <h3>{{dog.name}}</h3>
+          <p>{{dog.type}}</p>
+          <p>{{dog.weight}}lbs</p>
+         </div>
+
+
+         <div class="col-md-4" id="dogProfileIMG">
+          <img src="{{dog.image}}" alt="">
+         </div>
+         <div class="col-md-4" id="dogProfileReminder">
+          <h3><u>Reminders</u></h3>
+          <div id="reminderList" ng-repeat="reminder in dog.reminders">
+           <ul>
+            <li><img src="../images/paw.png" alt="" ng-click="dog.reminders.splice($index,1)">{{reminder}}</li>
+           </div>
+           <button ng-click="reminderAdd = true" class="btn btn-info btn-sm">Add Reminder</button>
+           <form ng-submit="createReminder(dog, reminder)" ng-show="reminderAdd">
+            <input type="text" class="form-control" ng-model="reminder" placeholder="Enter Reminder">
+            <button type="submit" class="btn btn-info btn-sm" ng-click="reminderAdd = false">Bark It!</button>
+           </form>
+          </div>
+          <hr>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
 <!-- </div> -->

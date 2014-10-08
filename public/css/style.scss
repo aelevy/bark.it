@@ -14,80 +14,125 @@
   display:none;
  }
  } */
-
+ body{
+  font-family:"Impact, Charcoal, sans-serif";
+ }
+ .row{
+  margin:auto;
+ }
  #loginPage{
   background:url("../images/barkItHome.png");
   background-size:cover;
   background-repeat:no-repeat;
   background-attachment:fixed;
   background-position:center;
+  text-align:center;
  }
+ #profileColumn{
+  text-align:center;
+ }
+ .loginButtons{
 
-.loginButtons{
+  margin-bottom:500px;
+  margin-top:-20px;
+  margin-left:6px;
+ }
+ .form-control{
+  width:20%;
+  display:inline-block;
+ }
+ #profilePage{
+  background:url("../images/lookRightPup.png");
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:cover;
+  text-align:right;
+ }
+ .container-fluid{
 
- margin-bottom:500px;
- margin-top:-20px;
- margin-left:6px;
-}
-.form-control{
- width:20%;
- display:inline-block;
-}
-#profilePage{
- background:url("../images/lookRightPup.png");
- background-repeat:no-repeat;
- background-attachment:fixed;
- background-size:cover;
- text-algin:right;
-}
-.container-fluid{
- text-align:center;
- margin:0px;
- padding:0px;
- width:100%;
- height:100%;
+  margin:0px;
+  padding:0px;
+  width:100%;
+  height:100%;
 
- #mainLogo{
+  #mainLogo{
    img{
     margin-top:-30px;
    }
- }
- #profileIMG{
-  img{
-  width:350px;
-  height:350px;
-  border-radius:50%;
- }
- }
- #socialNav{
-  img{
-   width:8%;
+  }
+  .ownerProfileInfo{
+   margin-right:10px;
+  }
+  #profileIMG{
+   img{
+    margin-top:40px;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+   }
+  }
+  #socialNav{
+   img{
+    width:8%;
+   }
+  }
+  #contactInfo{
+   img{
+    height:25px;
+    width:25px;
+   }
+  }
+  #dogTag{
+   img:hover{
+    cursor:pointer;
+   }
+  }
+  #dogProfileInfo{
+   h3{
+    font-size:45px;
+   }
+   p{
+    font-size:25px;
+   }
+  }
+  #dogProfileIMG{
+   img{
+    margin-top:10px;
+    width:225px;
+    height:225px;
+    border-radius:50%;
+   }
+  }
+  #dogCard{
+   margin-top:5px;
+   margin-bottom:25px;
+   background-color:#F2F2F2;
+   opacity:.5;
+   border:15px solid transparent;
+   border-image:url('../images/dogbone.png') 30 30 30 30 repeat;
+  }
+  #dogCard:hover{
+   opacity:1;
+  }
+  #dogProfileReminder{
+   .form-control{
+    width:60%;
+   }
+   h3{
+    font-size:35px;
+   }
+  }
+  #reminderList{
+   img{
+    height:15px;
+    width:15px;
+   }
+   ul{
+    margin-right:40px;
+   }
+   li{
+    list-style-type:none;
+    font-size:20px;
+   }
   }
  }
- #contactInfo{
-  img{
-   height:25px;
-   width:25px;
-  }
- }
- #dogTag{
-  img:hover{
-   cursor:pointer;
-  }
- }
- #dogProfileIMG{
-  img{
-   width:250px;
-   height:250px;
-   border-radius:50%;
-  }
- }
- #dogCard{
-  margin-top:5%;
-}
-#reminderList{
- li{
-  list-style-type:none;
- }
-}
-}

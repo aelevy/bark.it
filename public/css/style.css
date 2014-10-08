@@ -14,12 +14,22 @@
  display:none;
 }
 } */
+body {
+  font-family: "Impact, Charcoal, sans-serif"; }
+
+.row {
+  margin: auto; }
+
 #loginPage {
   background: url("../images/barkItHome.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center; }
+  background-position: center;
+  text-align: center; }
+
+#profileColumn {
+  text-align: center; }
 
 .loginButtons {
   margin-bottom: 500px;
@@ -35,17 +45,19 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  text-algin: right; }
+  text-align: right; }
 
 .container-fluid {
-  text-align: center;
   margin: 0px;
   padding: 0px;
   width: 100%;
   height: 100%; }
   .container-fluid #mainLogo img {
     margin-top: -30px; }
+  .container-fluid .ownerProfileInfo {
+    margin-right: 10px; }
   .container-fluid #profileIMG img {
+    margin-top: 40px;
     width: 350px;
     height: 350px;
     border-radius: 50%; }
@@ -56,11 +68,33 @@
     width: 25px; }
   .container-fluid #dogTag img:hover {
     cursor: pointer; }
+  .container-fluid #dogProfileInfo h3 {
+    font-size: 45px; }
+  .container-fluid #dogProfileInfo p {
+    font-size: 25px; }
   .container-fluid #dogProfileIMG img {
-    width: 250px;
-    height: 250px;
+    margin-top: 10px;
+    width: 225px;
+    height: 225px;
     border-radius: 50%; }
   .container-fluid #dogCard {
-    margin-top: 5%; }
+    margin-top: 5px;
+    margin-bottom: 25px;
+    background-color: #F2F2F2;
+    opacity: .5;
+    border: 15px solid transparent;
+    border-image: url("../images/dogbone.png") 30 30 30 30 repeat; }
+  .container-fluid #dogCard:hover {
+    opacity: 1; }
+  .container-fluid #dogProfileReminder .form-control {
+    width: 60%; }
+  .container-fluid #dogProfileReminder h3 {
+    font-size: 35px; }
+  .container-fluid #reminderList img {
+    height: 15px;
+    width: 15px; }
+  .container-fluid #reminderList ul {
+    margin-right: 40px; }
   .container-fluid #reminderList li {
-    list-style-type: none; }
+    list-style-type: none;
+    font-size: 20px; }

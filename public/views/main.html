@@ -1,16 +1,16 @@
 <div class="container-fluid" id="loginPage">
-<div class="row">
- <div class="col-md-12" id="mainLogo">
-  <img src="../images/barkItLogo.png" alt="">
- </div>
- <div class="loginButtons">
-  <a class="btn  btn-info" ng-click="Login = true" >Sign In</a>
-  <a class="btn  btn-info" ng-href="#/owners/new">Register</a>
+ <div class="row">
+  <div class="col-md-12" id="mainLogo">
+   <img src="../images/barkItLogo.png" alt="">
+  </div>
+  <div class="loginButtons">
+   <a class="btn  btn-info" ng-click="Login = true" >Sign In</a>
+   <a class="btn  btn-info" ng-href="#/owners/new">Register</a>
 
-  <div ng-show="Login">
-      <input class="form-control" ng-model="email" type="email" placeholder="Enter email">
+   <div ng-show="Login">
+    <input class="form-control" ng-model="email" type="email" placeholder="Enter email">
     <button class="btn btn-default" ng-click="login(email)">Sign In</button>
+   </div>
   </div>
  </div>
-</div>
 </div>
