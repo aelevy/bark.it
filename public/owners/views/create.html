@@ -1,7 +1,32 @@
-<input type="url" ng-model="owner.image" placeholder="Image URL">
-<input type="text" data-ng-model="owner.name" placeholder="Name">
-<input type="email" ng-model="owner.email" placeholder="E-mail">
-<input type="tel" ng-model="owner.phone" placeholder="Telephone Number">
-<input type="text" ng-model="owner.twitter" placeholder="Twitter Handle">
-<input type="text" ng-model="owner.instagram" placeholder="Instagram Username">
-<button data-ng-click="createOwner(owner)">Create</button>
+<div class="container-fluid" id="registrationPage">
+ <form role="form">
+  <div class="form-group">
+   <label for="image">Image Url</label>
+   <input type="url" id="image" class="form-control" ng-model="owner.image" placeholder="Image URL">
+  </div>
+  <div class="form-group">
+   <label for="name">Your Name</label>
+   <input type="text" id="name" class="form-control" data-ng-model="owner.name" placeholder="Name">
+  </div>
+  <div class="form-group">
+   <label for="email">E-mail Address</label>
+   <input type="email" id="email" class="form-control" ng-model="owner.email" placeholder="E-mail">
+  </div>
+  <div class="form-group">
+   <label for="phone">Phone Number</label>
+   <input type="tel" id="phone" class="form-control" ng-model="owner.phone" placeholder="Telephone Number With Dashes">
+  </div>
+  <div class="form-group">
+   <label for="twitter">Twitter Username</label>
+   <input type="text" id="twitter" class="form-control" ng-model="owner.twitter" placeholder="Twitter Username">
+  </div>
+  <div class="form-group">
+   <label for="instagram">Instagram Username</label>
+   <input type="text" id="instagram" class="form-control" ng-model="owner.instagram" placeholder="Instagram Username">
+  </div>
+  <div class="form-group">
+   <button data-ng-click="createOwner(owner)">Create</button>
+  </div>
+ </form>
+ <img src="../images/barkItLogo.png" alt="">
+</div>

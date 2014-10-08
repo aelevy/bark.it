@@ -20,6 +20,16 @@
  .row{
   margin:auto;
  }
+ #registrationPage{
+  background:url("../images/registerPage.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+  .form-control{
+   display:block;
+  }
+ }
  #loginPage{
   background:url("../images/barkItHome.png");
   background-size:cover;
@@ -77,6 +87,9 @@
    }
   }
   #contactInfo{
+   p{
+    font-size:18px;
+   }
    img{
     height:25px;
     width:25px;
@@ -105,10 +118,11 @@
   }
   #dogCard{
    margin-top:5px;
+   margin-right:25px;
    margin-bottom:25px;
    background-color:#F2F2F2;
    opacity:.5;
-   border:15px solid transparent;
+   border:15px;
    border-image:url('../images/dogbone.png') 30 30 30 30 repeat;
   }
   #dogCard:hover{
@@ -126,6 +140,7 @@
    img{
     height:15px;
     width:15px;
+    cursor:pointer;
    }
    ul{
     margin-right:40px;
