@@ -1,5 +1,9 @@
 <div class="container-fluid" id="registrationPage">
- <form role="form">
+ <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+ <form role="form" class="registrationForm">
   <div class="form-group">
    <label for="image">Image Url</label>
    <input type="url" id="image" class="form-control" ng-model="owner.image" placeholder="Copy and Paste Image URL">
@@ -24,9 +28,11 @@
    <label for="instagram">Instagram Username</label>
    <input type="text" id="instagram" class="form-control" ng-model="owner.instagram" placeholder="Instagram Username">
   </div>
-  <div class="form-group">
-   <button data-ng-click="createOwner(owner)">Create</button>
+   <div class="createButton">
+   <button class="btn btn-info" data-ng-click="createOwner(owner)">Create</button>
   </div>
  </form>
  <img src="../images/barkItLogo.png" alt="">
+</div>
+</div>
 </div>

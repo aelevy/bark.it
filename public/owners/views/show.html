@@ -66,28 +66,31 @@
 
        <div ng-repeat="dog in dogs">
         <div  id="dogCard" class="row">
-         <div class="col-md-4" id="dogProfileInfo">
-          <h3>{{dog.name}}</h3>
-          <p>{{dog.type}}</p>
-          <p>{{dog.weight}}lbs</p>
-         </div>
+         <div class="col-md-6" id="dogProfileReminder">
+          <h3><u>Reminders</u></h3>
+          <div id="reminderList" ng-repeat="reminder in dog.reminders">
+           <ul>
+            <li><img src="../images/paw.png" alt="" ng-click="deleteReminder(reminder)"><!-- <img src="../images/paw.png" alt="" ng-click="dog.reminders.splice(\$index,1)"> -->{{reminder}}</li>
+           </div>
+           <button ng-click="reminderAdd = true" class="btn btn-info btn-sm">Add Reminder</button>
+           <form ng-submit="createReminder(dog, reminder)" ng-show="reminderAdd" class="reminderSubmit">
+            <input type="text" class="form-control" ng-model="reminder" placeholder="Enter Reminder">
+            <button type="submit" class="btn btn-info btn-sm" ng-click="reminderAdd = false">Bark It!</button>
+           </form>
+          </div>
+
 
 
          <div class="col-md-4" id="dogProfileIMG">
           <img src="{{dog.image}}" alt="">
          </div>
-         <div class="col-md-4" id="dogProfileReminder">
-          <h3><u>Reminders</u></h3>
-          <div id="reminderList" ng-repeat="reminder in dog.reminders">
-           <ul>
-            <li><img src="../images/paw.png" alt="" ng-click="dog.reminders.splice($index,1)">{{reminder}}</li>
-           </div>
-           <button ng-click="reminderAdd = true" class="btn btn-info btn-sm">Add Reminder</button>
-           <form ng-submit="createReminder(dog, reminder)" ng-show="reminderAdd">
-            <input type="text" class="form-control" ng-model="reminder" placeholder="Enter Reminder">
-            <button type="submit" class="btn btn-info btn-sm" ng-click="reminderAdd = false">Bark It!</button>
-           </form>
-          </div>
+
+         <div class="col-md-2" id="dogProfileInfo">
+          <h3>{{dog.name}}</h3>
+          <p>{{dog.type}}</p>
+          <p>{{dog.weight}}lbs</p>
+         </div>
+
           <hr>
          </div>
         </div>

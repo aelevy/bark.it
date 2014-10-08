@@ -45,7 +45,11 @@
                 });
             }
 
-
+            function deleteReminder(dog){
+              $http.delete("api/collections/dogs/" + dog._id, dog).then(function (res){
+               $rootScope.$broadcast("reminder:deleted");
+              });
+            }
             function deleteDog(dogId) {
                 $http.delete("api/collections/dogs/" + dogId).then(function (res) {
                     $rootScope.$broadcast("dog:deleted");

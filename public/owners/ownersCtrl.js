@@ -48,10 +48,16 @@
 
             };
 
+            $scope.deleteReminder = function (dog, reminder) {
+             dog.reminders.splice($index,1);
+             dogsSvc.deleteReminder(dog);
+            }
+
             $scope.editOwner = function (owner) {
                 ownersSvc.editOwner(owner);
                 $location.path('/owners');
             };
+
 
             $scope.deleteOwner = function (id) {
                 ownersSvc.deleteOwner(id);
