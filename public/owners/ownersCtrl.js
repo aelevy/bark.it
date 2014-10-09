@@ -38,7 +38,7 @@
                  weight:newDog.weight,
                  reminders:[]
                 });
-                $location.path('/owners/' + currentUser._id);
+                $location.path('/owners/' + owner._id);
             };
 
             $scope.createReminder = function (dog, reminder) {
