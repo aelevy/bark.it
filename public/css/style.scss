@@ -15,11 +15,12 @@
  }
  } */
  body{
-  font-family:"Impact, Charcoal, sans-serif";
+  font-family: 'Bree Serif', serif;
  }
  .row{
   margin:auto;
  }
+
  #registrationPage{
   background:url("../images/registerPage.png");
   background-size:cover;
@@ -27,12 +28,14 @@
   background-attachment:fixed;
   background-position:center;
   width:100%;
+  padding-bottom:400px;
 
   .registrationForm{
    border:2px solid gray;
    background:#f5f5f5;
    opacity:.8;
    padding:10px;
+   margin-bottom:240px;
   }
   .createButton{
    margin-left:200px;
@@ -46,13 +49,13 @@
   }
  }
  #loginPage{
-  background:url("../images/barkItHome.png");
+  background:url("../images/barkItHome.png") no-repeat center center fixed;
   background-size:cover;
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  background-position:center;
-  width:100%;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
   text-align:center;
+  padding-bottom:300px;
  }
  #profileColumn{
   text-align:center;
@@ -73,7 +76,11 @@
   background-attachment:fixed;
   background-size:cover;
   width:100%;
+  padding-bottom:300px;
 
+  .dogButton{
+   margin-top:5px;
+  }
  }
  .container-fluid{
 
@@ -88,7 +95,7 @@
    }
   }
   .ownerProfileInfo{
-   margin-top:20%;
+   margin-top:15%;
   }
   #profileIMG{
    img{
