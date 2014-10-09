@@ -20,7 +20,9 @@
  .row{
   margin:auto;
  }
-
+.dogButton{
+ margin-top:5px;
+}
  #registrationPage{
   background:url("../images/registerPage.png");
   background-size:cover;
@@ -83,9 +85,7 @@
   width:100%;
   padding-bottom:300px;
 
-  .dogButton{
-   margin-top:5px;
-  }
+
  }
  .container-fluid{
 
