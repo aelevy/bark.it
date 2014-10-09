@@ -21,7 +21,7 @@
              var myDogs = _.filter(dogs, function(dog) {
               return dog.owner === $scope.owner._id}
              );
-             console.log(myDogs);
+
 
              $scope.dogs = myDogs;
             })
@@ -43,15 +43,16 @@
 
             $scope.createReminder = function (dog, reminder) {
               dog.reminders.push(reminder);
-              console.log(dog);
+
              dogsSvc.createReminder(dog);
 
             };
 
             $scope.deleteReminder = function (dog, reminder) {
-             dog.reminders.splice($index,1);
+             console.log(dog);
+             dog.reminders.splice(dog.reminders.indexOf(reminder), 1);
              dogsSvc.deleteReminder(dog);
-            }
+            };
 
             $scope.editOwner = function (owner) {
                 ownersSvc.editOwner(owner);

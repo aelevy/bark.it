@@ -12,7 +12,8 @@
                 createDog: createDog,
                 editDog: editDog,
                 deleteDog: deleteDog,
-                createReminder: createReminder
+                createReminder: createReminder,
+                deleteReminder: deleteReminder
             };
 
             function getDogs() {
@@ -46,7 +47,7 @@
             }
 
             function deleteReminder(dog){
-              $http.delete("api/collections/dogs/" + dog._id, dog).then(function (res){
+              $http.put("api/collections/dogs/" + dog._id, dog).then(function (res){
                $rootScope.$broadcast("reminder:deleted");
               });
             }

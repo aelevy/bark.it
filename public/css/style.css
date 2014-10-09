@@ -28,7 +28,10 @@ body {
   background-position: center;
   width: 100%; }
   #registrationPage .registrationForm {
-    border: 2px solid gray; }
+    border: 2px solid gray;
+    background: #f5f5f5;
+    opacity: .8;
+    padding: 10px; }
   #registrationPage .createButton {
     margin-left: 200px; }
   #registrationPage .form-control {
@@ -60,12 +63,11 @@ body {
   display: inline-block; }
 
 #profilePage {
-  background: url("../images/lookRightPup.png");
+  background: url("../images/lookLeftPup.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  width: 100%;
-  text-align: right; }
+  width: 100%; }
 
 .container-fluid {
   margin: 0px;
@@ -75,9 +77,9 @@ body {
   .container-fluid #mainLogo img {
     margin-top: -30px; }
   .container-fluid .ownerProfileInfo {
-    margin-right: 10px; }
+    margin-top: 20%; }
   .container-fluid #profileIMG img {
-    margin-top: 40px;
+    /* margin-top:40px; */
     width: 350px;
     height: 350px;
     border-radius: 50%; }
@@ -91,7 +93,7 @@ body {
   .container-fluid #dogTag img:hover {
     cursor: pointer; }
   .container-fluid #dogProfileInfo {
-    margin-left: 60px; }
+    margin-left: -100px; }
     .container-fluid #dogProfileInfo h3 {
       font-size: 45px; }
     .container-fluid #dogProfileInfo p {
@@ -103,16 +105,10 @@ body {
     border-radius: 50%; }
   .container-fluid #dogCard {
     margin-top: 5px;
-    margin-right: 80px;
-    margin-bottom: 25px;
-    background-color: #F2F2F2;
-    opacity: .5;
-    border: 15px;
-    border-image: url("../images/dogbone.png") 30 30 30 30 repeat; }
-  .container-fluid #dogCard:hover {
-    opacity: 1; }
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px black; }
   .container-fluid #dogProfileReminder {
-    margin-right: -80px; }
+    /*  margin-right:-80px; */ }
     .container-fluid #dogProfileReminder .reminderSubmit {
       margin-top: 10px;
       margin-right: 15px; }
@@ -123,8 +119,8 @@ body {
   .container-fluid #reminderList img {
     height: 20px;
     width: 20px;
-    margin-bottom: 5px;
-    margin-right: 5px;
+    /* margin-bottom:5px;
+    margin-right:5px; */
     cursor: pointer; }
   .container-fluid #reminderList ul {
     margin-right: 40px; }
