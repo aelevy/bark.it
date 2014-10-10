@@ -56,7 +56,7 @@
 
             $scope.editOwner = function (owner) {
                 ownersSvc.editOwner(owner);
-                $location.path('/owners');
+                $location.path('/owners/' + owner._id);
             };
 
 
