@@ -89,8 +89,8 @@ body {
     margin-top: 15%; }
   .container-fluid #profileIMG img {
     /* margin-top:40px; */
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%; }
   .container-fluid #socialNav img {
     width: 8%; }
